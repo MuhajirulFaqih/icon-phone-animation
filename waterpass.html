@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bubble Level</title>
+  <style>
+    body {
+      background: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .level-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background: #222;
+      padding: 20px;
+      border-radius: 15px;
+    }
+
+    .circle-level {
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(#9fe450, #5d891f);
+      border-radius: 50%;
+      border: 4px solid #000;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .linear-level {
+      width: 200px;
+      height: 40px;
+      background: linear-gradient(to right, #9fe450, #5d891f);
+      border: 4px solid #000;
+      border-radius: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .vertical {
+      transform: rotate(90deg);
+      transform-origin: left center;
+    }
+
+    .bubble {
+      width: 40px;
+      height: 40px;
+      background: radial-gradient(ellipse at center, #cfff92, #8ec63f);
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="level-wrapper">
+    <div class="circle-level">
+      <div class="bubble" id="circleBubble"></div>
+    </div>
+    <div class="linear-level vertical">
+      <div class="bubble" id="verticalBubble"></div>
+    </div>
+    <div class="linear-level horizontal">
+      <div class="bubble" id="horizontalBubble"></div>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener("deviceorientation", (event) => {
+      const beta = event.beta || 0; // front-back tilt
+      const gamma = event.gamma || 0; // left-right tilt
+
+      const maxOffset = 80;
+
+      // Bubble in circular level
+      const circle = document.getElementById("circleBubble");
+      const x = Math.max(-maxOffset, Math.min(maxOffset, gamma * 2));
+      const y = Math.max(-maxOffset, Math.min(maxOffset, beta * 2));
+      circle.style.transform = `translate(${x}px, ${y}px)`;
+
+      // Horizontal level (left-right tilt)
+      const hBubble = document.getElementById("horizontalBubble");
+      const hOffset = Math.max(-80, Math.min(80, gamma * 2));
+      hBubble.style.left = `${80 + hOffset}px`;
+
+      // Vertical level (front-back tilt)
+      const vBubble = document.getElementById("verticalBubble");
+      const vOffset = Math.max(-80, Math.min(80, beta * 2));
+      vBubble.style.left = `${80 + vOffset}px`;
+    });
+  </script>
+</body>
+</html>
