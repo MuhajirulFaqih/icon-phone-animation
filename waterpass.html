@@ -1,100 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bubble Level</title>
-  <style>
-    body {
-      background: #111;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Bubble Level</title>
+        <style>
+            #circle,
+            #horizontal,
+            #vertical {
+                position: relative;
+            }
 
-    .level-wrapper {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      background: #222;
-      padding: 20px;
-      border-radius: 15px;
-    }
+            #circleBubble,
+            #horizontalBubble,
+            #verticalBubble {
+                transform-box: fill-box;
+                transform-origin: center;
+                will-change: transform;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="level-wrapper">
+            
+<svg width="127px" viewBox="0 0 83 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="circle">
+    <g id="Vector">
+    <mask id="path-1-inside-1_2397_585" fill="white">
+    <path d="M78.1354 40.8379C78.1354 20.5648 61.7008 4.13022 41.4277 4.13022C21.1546 4.13022 4.72007 20.5648 4.72007 40.8379C4.72007 61.111 21.1546 77.5456 41.4277 77.5456C61.7008 77.5456 78.1354 61.111 78.1354 40.8379ZM82.0117 40.8379C82.0117 63.2518 63.8417 81.4219 41.4277 81.4219C19.0138 81.4219 0.84375 63.2518 0.84375 40.8379C0.84375 18.424 19.0138 0.253906 41.4277 0.253906C63.8417 0.253906 82.0117 18.424 82.0117 40.8379Z"/>
+    </mask>
+    <path d="M78.1354 40.8379C78.1354 20.5648 61.7008 4.13022 41.4277 4.13022C21.1546 4.13022 4.72007 20.5648 4.72007 40.8379C4.72007 61.111 21.1546 77.5456 41.4277 77.5456C61.7008 77.5456 78.1354 61.111 78.1354 40.8379ZM82.0117 40.8379C82.0117 63.2518 63.8417 81.4219 41.4277 81.4219C19.0138 81.4219 0.84375 63.2518 0.84375 40.8379C0.84375 18.424 19.0138 0.253906 41.4277 0.253906C63.8417 0.253906 82.0117 18.424 82.0117 40.8379Z" fill="url(#paint0_linear_2397_585)" stroke="url(#paint1_linear_2397_585)" stroke-width="0.775264" mask="url(#path-1-inside-1_2397_585)"/>
+    </g>
+    <g id="outer">
+    <g id="Ellipse" filter="url(#filter0_ii_2397_585)">
+    <circle cx="41.4303" cy="40.8385" r="36.7077" fill="url(#paint2_radial_2397_585)"/>
+    </g>
+    <g id="circleBubble" filter="url(#filter1_di_2397_585)">
+    <circle cx="41.4307" cy="40.8389" r="6.81351" fill="url(#paint3_radial_2397_585)"/>
+    </g>
+    <path id="Vector_2" d="M78.138 40.8385H4.72266M41.4303 77.5462V4.13086" stroke="#323232" stroke-width="0.969079"/>
+    <circle id="Ellipse_2" cx="41.4236" cy="40.8386" r="11.205" stroke="#323232" stroke-width="0.969079"/>
+    </g>
+    </g>
+    <defs>
+    <filter id="filter0_ii_2397_585" x="4.72266" y="2.1927" width="73.4141" height="75.3532" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+    <feMorphology radius="1.93816" operator="erode" in="SourceAlpha" result="effect1_innerShadow_2397_585"/>
+    <feOffset/>
+    <feGaussianBlur stdDeviation="8.72171"/>
+    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.391827 0 0 0 0 0.427885 0 0 0 1 0"/>
+    <feBlend mode="normal" in2="shape" result="effect1_innerShadow_2397_585"/>
+    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+    <feMorphology radius="1.93816" operator="erode" in="SourceAlpha" result="effect2_innerShadow_2397_585"/>
+    <feOffset dy="-1.93816"/>
+    <feGaussianBlur stdDeviation="2.4227"/>
+    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+    <feColorMatrix type="matrix" values="0 0 0 0 0.692308 0 0 0 0 1 0 0 0 0 0.984615 0 0 0 0.67 0"/>
+    <feBlend mode="normal" in2="effect1_innerShadow_2397_585" result="effect2_innerShadow_2397_585"/>
+    </filter>
+    <filter id="filter1_di_2397_585" x="33.9819" y="33.3901" width="14.8994" height="14.8975" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+    <feMorphology radius="0.21175" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_2397_585"/>
+    <feOffset/>
+    <feGaussianBlur stdDeviation="0.21175"/>
+    <feComposite in2="hardAlpha" operator="out"/>
+    <feColorMatrix type="matrix" values="0 0 0 0 0.190112 0 0 0 0 0.784363 0 0 0 0 0.841346 0 0 0 1 0"/>
+    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2397_585"/>
+    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2397_585" result="shape"/>
+    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+    <feMorphology radius="0.638836" operator="erode" in="SourceAlpha" result="effect2_innerShadow_2397_585"/>
+    <feOffset/>
+    <feGaussianBlur stdDeviation="0.638836"/>
+    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.391827 0 0 0 0 0.427885 0 0 0 1 0"/>
+    <feBlend mode="normal" in2="shape" result="effect2_innerShadow_2397_585"/>
+    </filter>
+    <linearGradient id="paint0_linear_2397_585" x1="41.4277" y1="4.13022" x2="41.4277" y2="77.5456" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#6F6F71"/>
+    <stop offset="1"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear_2397_585" x1="41.4277" y1="4.13022" x2="41.4277" y2="77.5456" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#3A3A3A"/>
+    <stop offset="1" stop-color="#888888"/>
+    </linearGradient>
+    <radialGradient id="paint2_radial_2397_585" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(41.4303 56.3292) rotate(-90) scale(48.381 55.9946)">
+    <stop stop-color="#C7FFF2"/>
+    <stop offset="0.592676" stop-color="#24D5E8"/>
+    <stop offset="1" stop-color="#119AA7"/>
+    </radialGradient>
+    <radialGradient id="paint3_radial_2397_585" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(40.9228 35.2235) rotate(90) scale(10.089 7.56674)">
+    <stop stop-color="white"/>
+    <stop offset="0.592676" stop-color="#24D5E8"/>
+    <stop offset="1" stop-color="#119AA7"/>
+    </radialGradient>
+    </defs>
+    </svg>
+    
+        </div>
 
-    .circle-level {
-      width: 200px;
-      height: 200px;
-      background: radial-gradient(#9fe450, #5d891f);
-      border-radius: 50%;
-      border: 4px solid #000;
-      position: relative;
-      overflow: hidden;
-    }
+        <script>
+            window.addEventListener("deviceorientation", (event) => {
+                const beta = event.beta || 0; // kemiringan depan-belakang
+                const gamma = event.gamma || 0; // kemiringan kiri-kanan
 
-    .linear-level {
-      width: 200px;
-      height: 40px;
-      background: linear-gradient(to right, #9fe450, #5d891f);
-      border: 4px solid #000;
-      border-radius: 20px;
-      position: relative;
-      overflow: hidden;
-    }
+                // Gerakan bubble di lingkaran
+                const circle = document.getElementById("circleBubble");
+                if (circle) {
+                    const cx = gamma; // batas kiri-kanan
+                    const cy = beta; // batas atas-bawah
+                    circle.style.transform = `translate(${cx}%, ${cy}%)`;
+                }
 
-    .vertical {
-      transform: rotate(90deg);
-      transform-origin: left center;
-    }
+                // Gerakan bubble horizontal
+                const hBubble = document.getElementById("horizontalBubble");
+                if (hBubble) {
+                    const hX = Math.max(0, Math.min(35, 20 + gamma * 2)); // sesuaikan offset dengan ukuran viewbox
+                    hBubble.setAttribute("transform", `translate(${hX}, 0)`);
+                }
 
-    .bubble {
-      width: 40px;
-      height: 40px;
-      background: radial-gradient(ellipse at center, #cfff92, #8ec63f);
-      border-radius: 50%;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-  </style>
-</head>
-<body>
-  <div class="level-wrapper">
-    <div class="circle-level">
-      <div class="bubble" id="circleBubble"></div>
-    </div>
-    <div class="linear-level vertical">
-      <div class="bubble" id="verticalBubble"></div>
-    </div>
-    <div class="linear-level horizontal">
-      <div class="bubble" id="horizontalBubble"></div>
-    </div>
-  </div>
-
-  <script>
-    window.addEventListener("deviceorientation", (event) => {
-      const beta = event.beta || 0; // front-back tilt
-      const gamma = event.gamma || 0; // left-right tilt
-
-      const maxOffset = 80;
-
-      // Bubble in circular level
-      const circle = document.getElementById("circleBubble");
-      const x = Math.max(-maxOffset, Math.min(maxOffset, gamma * 2));
-      const y = Math.max(-maxOffset, Math.min(maxOffset, beta * 2));
-      circle.style.transform = `translate(${x}px, ${y}px)`;
-
-      // Horizontal level (left-right tilt)
-      const hBubble = document.getElementById("horizontalBubble");
-      const hOffset = Math.max(-80, Math.min(80, gamma * 2));
-      hBubble.style.left = `${80 + hOffset}px`;
-
-      // Vertical level (front-back tilt)
-      const vBubble = document.getElementById("verticalBubble");
-      const vOffset = Math.max(-80, Math.min(80, beta * 2));
-      vBubble.style.left = `${80 + vOffset}px`;
-    });
-  </script>
-</body>
+                // Gerakan bubble vertikal
+                const vBubble = document.getElementById("verticalBubble");
+                if (vBubble) {
+                    const vY = Math.max(0, Math.min(30, 15 + beta * 2)); // sesuaikan offset
+                    vBubble.setAttribute("transform", `translate(0, ${vY})`);
+                }
+            });
+        </script>
+    </body>
 </html>
