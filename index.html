@@ -27,13 +27,13 @@
                 perspective: 200px;
             }
             
-            #phone-1, #phone-2, #phone-3, #phone-4, .arrow {
+            #phone-1, #phone-2, #phone-3, #phone-4, #phone-5, #phone-6, .arrow {
                 position: absolute;
                 top: 0;
                 left: 0;
             }
 
-            #phone-1, #phone-2, #phone-3, #phone-4 {
+            #phone-1, #phone-2, #phone-3, #phone-4, #phone-5, #phone-6 {
                 width: 100%;
                 opacity: 0;
             }
@@ -90,6 +90,16 @@
                 animation: rotateLeftArrow 3s ease-in-out infinite;
             }
 
+            #poly-back-1, #poly-back-2, #poly-back-3 {
+                fill: #00ffff;
+                animation: arrowFadeMoveReverse 3s ease-in-out infinite;
+            }
+
+            #poly-back-4, #poly-back-5, #poly-back-6 {
+                fill: #00ffff;
+                animation: arrowFadeMoveBottom 3s ease-in-out infinite;
+            }
+
             /* Rotate Right */
             #phone-4 {
                 animation: rotateRight 3s ease-in-out infinite;
@@ -99,6 +109,38 @@
                 opacity: 0;
                 transform: rotate(-40deg);
                 animation: rotateRightArrow 3s ease-in-out infinite;
+            }
+
+            /* Parallel Roll */
+            #phone-5 {
+                animation: rotateRight 3s ease-in-out infinite;
+                transform: rotate(-45deg);
+            }
+
+            #poly-parallel-up-1, #poly-parallel-up-2, #poly-parallel-up-3 {
+                fill: #00ffff;
+                animation: arrowFadeMoveReverse 3s ease-in-out infinite;
+            }
+
+            #poly-parallel-up-4, #poly-parallel-up-5, #poly-parallel-up-6 {
+                fill: #00ffff;
+                animation: arrowFadeMoveBottom 3s ease-in-out infinite;
+            }
+
+            /* Parallel Roll Reverse*/
+            #phone-6 {
+                animation: rotateLeft 3s ease-in-out infinite;
+                transform: rotate(45deg);
+            }
+
+            #poly-parallel-down-1, #poly-parallel-down-2, #poly-parallel-down-3 {
+                fill: #00ffff;
+                animation: arrowFadeMoveBottom 3s ease-in-out infinite;
+            }
+
+            #poly-parallel-down-4, #poly-parallel-down-5, #poly-parallel-down-6 {
+                fill: #00ffff;
+                animation: arrowFadeMoveReverse 3s ease-in-out infinite;
             }
 
             /* Animation Keyframe */
@@ -413,6 +455,54 @@
                         </linearGradient>
                         </defs>
                     </svg>                                            
+                </div>
+            </div>
+            <div class="icon-outer">
+                <div id="phone-5">
+                    <svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <g>
+                            <rect id="rectangle" x="8" y="18" width="22" height="2" rx="0.968433" fill="white"/>
+                            <rect id="rectangle_2" x="17.0884" y="18.6816" width="3.8237" height="0.636746" rx="0.308323" fill="black"/>
+                            </g>
+                        </g>
+                    </svg>                                             
+                </div>
+                <div class="arrow">
+                    <svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <path id="poly-parallel-up-6" class="poly-arrow" d="M30.5 33.6195L34.7568 30.4596C34.7568 30.4596 32.2775 30.9615 30.4999 30.9615C28.7224 30.9615 26.2432 30.4596 26.2432 30.4596L30.5 33.6195Z" fill="#24D5E8"/>
+                            <path id="poly-parallel-up-5" class="poly-arrow" d="M30.5 29.8746L34.7568 26.7147C34.7568 26.7147 32.2775 27.2167 30.4999 27.2167C28.7224 27.2167 26.2432 26.7147 26.2432 26.7147L30.5 29.8746Z" fill="#24D5E8" fill-opacity="0.5"/>
+                            <path id="poly-parallel-up-4" class="poly-arrow" d="M30.5 26.1291L34.7568 22.9693C34.7568 22.9693 32.2775 23.4712 30.4999 23.4712C28.7224 23.4712 26.2432 22.9693 26.2432 22.9693L30.5 26.1291Z" fill="#24D5E8" fill-opacity="0.2"/>
+                            <path id="poly-parallel-up-3" class="poly-arrow" d="M7.49996 4.38054L11.7568 7.54039C11.7568 7.54039 9.27747 7.03847 7.49993 7.03847C5.72239 7.03847 3.24316 7.54039 3.24316 7.54039L7.49996 4.38054Z" fill="#24D5E8"/>
+                            <path id="poly-parallel-up-2" class="poly-arrow" d="M7.49996 8.12541L11.7568 11.2853C11.7568 11.2853 9.27747 10.7833 7.49993 10.7833C5.72239 10.7833 3.24316 11.2853 3.24316 11.2853L7.49996 8.12541Z" fill="#24D5E8" fill-opacity="0.5"/>
+                            <path id="poly-parallel-up-1" class="poly-arrow" d="M7.49996 11.8709L11.7568 15.0307C11.7568 15.0307 9.27747 14.5288 7.49993 14.5288C5.72239 14.5288 3.24316 15.0307 3.24316 15.0307L7.49996 11.8709Z" fill="#24D5E8" fill-opacity="0.2"/>
+                        </g>
+                    </svg>                                                                 
+                </div>
+            </div>
+            <div class="icon-outer">
+                <div id="phone-6">
+                    <svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <g>
+                            <rect id="rectangle" x="8" y="18" width="22" height="2" rx="0.968433" fill="white"/>
+                            <rect id="rectangle_2" x="17.0884" y="18.6816" width="3.8237" height="0.636746" rx="0.308323" fill="black"/>
+                            </g>
+                        </g>
+                    </svg>                                             
+                </div>
+                <div class="arrow">
+                    <svg viewBox="0 0 39 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                        <path id="poly-parallel-down-6" class="poly-arrow" d="M31 22.9692L35.2568 26.1291C35.2568 26.1291 32.7775 25.6272 30.9999 25.6272C29.2224 25.6272 26.7432 26.1291 26.7432 26.1291L31 22.9692Z" fill="#24D5E8"/>
+                        <path id="poly-parallel-down-5" class="poly-arrow" d="M31 26.7141L35.2568 29.874C35.2568 29.874 32.7775 29.372 30.9999 29.372C29.2224 29.372 26.7432 29.874 26.7432 29.874L31 26.7141Z" fill="#24D5E8" fill-opacity="0.5"/>
+                        <path id="poly-parallel-down-4" class="poly-arrow" d="M31 30.4596L35.2568 33.6195C35.2568 33.6195 32.7775 33.1175 30.9999 33.1175C29.2224 33.1175 26.7432 33.6195 26.7432 33.6195L31 30.4596Z" fill="#24D5E8" fill-opacity="0.2"/>
+                        <path id="poly-parallel-down-3" class="poly-arrow" d="M7.99996 15.0307L12.2568 11.8709C12.2568 11.8709 9.77747 12.3728 7.99993 12.3728C6.22239 12.3728 3.74316 11.8709 3.74316 11.8709L7.99996 15.0307Z" fill="#24D5E8"/>
+                        <path id="poly-parallel-down-2" class="poly-arrow" d="M7.99996 11.2859L12.2568 8.12602C12.2568 8.12602 9.77747 8.62795 7.99993 8.62795C6.22239 8.62795 3.74316 8.12602 3.74316 8.12602L7.99996 11.2859Z" fill="#24D5E8" fill-opacity="0.5"/>
+                        <path id="poly-parallel-down-1" class="poly-arrow" d="M7.99996 7.54039L12.2568 4.38054C12.2568 4.38054 9.77747 4.88246 7.99993 4.88246C6.22239 4.88246 3.74316 4.38054 3.74316 4.38054L7.99996 7.54039Z" fill="#24D5E8" fill-opacity="0.2"/>
+                        </g>
+                    </svg>                                                                                        
                 </div>
             </div>
         </div>
